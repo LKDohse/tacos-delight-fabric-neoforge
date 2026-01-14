@@ -23,6 +23,8 @@ public class ModItems {
     public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItem("halite", new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     public static final RegistrySupplier<Item> BEEF_BURRITO_BOX_BLOCK_ITEM = registerItem("beef_burrito_box", new BlockItem(ModBlocks.BEEF_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHICKEN_BURRITO_BOX_BLOCK_ITEM = registerItem("chicken_burrito_box", new BlockItem(ModBlocks.CHICKEN_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> POTATO_BURRITO_BOX_BLOCK_ITEM = registerItem("potato_burrito_box", new BlockItem(ModBlocks.POTATO_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     //Ores and Ore-related Items
     public static final RegistrySupplier<Item> SALT = registerItemViaSettings("salt", ModFoodComponents.SALT);

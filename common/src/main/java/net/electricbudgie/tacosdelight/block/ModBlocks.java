@@ -32,9 +32,9 @@ public class ModBlocks {
 //    public static final RegistrySupplier<Block> CHICKEN_TACO_BOX_BLOCK = registerBlock("chicken_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
 //    public static final RegistrySupplier<Block> POTATO_TACO_BOX_BLOCK = registerBlock("potato_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
 //
-  public static final RegistrySupplier<Block> BEEF_BURRITO_BOX_BLOCK = registerBlock("beef_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
-//    public static final RegistrySupplier<Block> CHICKEN_BURRITO_BOX_BLOCK = registerBlock("chicken_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
-//    public static final RegistrySupplier<Block> POTATO_BURRITO_BOX_BLOCK = registerBlock("potato_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
+    public static final RegistrySupplier<Block> BEEF_BURRITO_BOX_BLOCK = registerBlock("beef_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
+    public static final RegistrySupplier<Block> CHICKEN_BURRITO_BOX_BLOCK = registerBlock("chicken_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
+    public static final RegistrySupplier<Block> POTATO_BURRITO_BOX_BLOCK = registerBlock("potato_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
 //
 //    public static final RegistrySupplier<Block> BEEF_CRAVINGS_BLOCK_BOX = registerBlock("beef_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
 //    public static final RegistrySupplier<Block> CHICKEN_CRAVINGS_BLOCK_BOX = registerBlock("chicken_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
@@ -48,12 +48,12 @@ public class ModBlocks {
 
     public static final RegistrySupplier<Block> DEEP_FRYER = registerBlock("deep_fryer", new DeepFryerBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
 
-    public static void initialize(){
+    public static void initialize() {
         BLOCKS.register();
     }
 
-    public static RegistrySupplier<Block> registerBlock(String name, Block block){
-        var registeredBlock = BLOCKS.register(name, ()-> block);
-       return registeredBlock;
+    public static RegistrySupplier<Block> registerBlock(String name, Block block) {
+        var registeredBlock = BLOCKS.register(name, () -> block);
+        return registeredBlock;
     }
 }
