@@ -1,21 +1,15 @@
 package net.electricbudgie.tacosdelight.item;
 
-import dev.architectury.platform.Mod;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
-import net.electricbudgie.tacosdelight.components.ModComponents;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -27,6 +21,8 @@ public class ModItems {
     //public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItem("cheese_wheel", new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0).arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItem("halite", new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+
+    public static final RegistrySupplier<Item> BEEF_BURRITO_BOX_BLOCK_ITEM = registerItem("beef_burrito_box", new BlockItem(ModBlocks.BEEF_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     //Ores and Ore-related Items
     public static final RegistrySupplier<Item> SALT = registerItemViaSettings("salt", ModFoodComponents.SALT);
