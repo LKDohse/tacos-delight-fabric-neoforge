@@ -1,7 +1,7 @@
 package net.electricbudgie.fabric.client;
 
 import net.electricbudgie.fabric.tacosdelight.ModClientTickEvents;
-import net.electricbudgie.fabric.tacosdelight.ModModelPredicateProvider;
+//import net.electricbudgie.fabric.tacosdelight.ModModelPredicateProvider;
 import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
 import net.electricbudgie.tacosdelight.particle.GassyParticle;
 import net.electricbudgie.tacosdelight.particle.ModParticles;

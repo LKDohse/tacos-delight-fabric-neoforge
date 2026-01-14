@@ -1,10 +1,13 @@
 package net.electricbudgie.tacosdelight.item;
 
+import dev.architectury.platform.Mod;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.components.ModComponents;
+import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
+import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,14 +20,13 @@ import java.util.List;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(TacosDelight.MOD_ID, RegistryKeys.ITEM);
-    public static final List<Item> CREATIVE_MODE_TAB = new ArrayList<>();
 
     //Block Items
-    public static final RegistrySupplier<Item> DEEP_FRYER_ITEM = registerItem("deep_fryer", new BlockItem(ModBlocks.DEEP_FRYER.get(), new Item.Settings()));
-    public static final RegistrySupplier<Item> CHEESE_PRESS_ITEM = registerItem("cheese_press", new BlockItem(ModBlocks.CHEESE_PRESS_BLOCK.get(), new Item.Settings()));
-    public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItem("cheese_wheel", new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0)));
+    //public static final RegistrySupplier<Item> DEEP_FRYER_ITEM = registerItem("deep_fryer", new BlockItem(ModBlocks.DEEP_FRYER.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    //public static final RegistrySupplier<Item> CHEESE_PRESS_ITEM = registerItem("cheese_press", new BlockItem(ModBlocks.CHEESE_PRESS_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    //public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItem("cheese_wheel", new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0).arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
-    public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItem("halite", new BlockItem(ModBlocks.HALITE.get(), new Item.Settings()));
+    public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItem("halite", new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     //Ores and Ore-related Items
     public static final RegistrySupplier<Item> SALT = registerItemViaSettings("salt", ModFoodComponents.SALT);
@@ -106,9 +108,9 @@ public class ModItems {
     public static final RegistrySupplier<Item> POTATO_CRUNCHWRAP = registerItemViaSettings("potato_crunchwrap", ModFoodComponents.POTATO_CRUNCHWRAP_SETTINGS);
 
     //Crops
-    public static final RegistrySupplier<Item> LIME = registerItem("lime", new AliasedBlockItem(ModBlocks.LIME_TREE.get(), ModFoodComponents.LIME_SETTINGS));
-    public static final RegistrySupplier<Item> BLUE_RASPBERRY = registerItem("blue_raspberry", new AliasedBlockItem(ModBlocks.BLUE_RASPBERRY_BUSH.get(), ModFoodComponents.BLUE_RASPBERRY_SETTINGS));
-    public static final RegistrySupplier<Item> HOT_PEPPER_SEEDS = registerItem("hot_pepper_seeds", new AliasedBlockItem(ModBlocks.HOT_PEPPER_CROP.get(), new Item.Settings()));
+    public static final RegistrySupplier<AliasedBlockItem> LIME = registerAliasedBlockItem("lime", ModBlocks.LIME_TREE.get(), ModFoodComponents.LIME_SETTINGS);
+    public static final RegistrySupplier<AliasedBlockItem> BLUE_RASPBERRY =  registerAliasedBlockItem("blue_raspberry", ModBlocks.BLUE_RASPBERRY_BUSH.get(), ModFoodComponents.BLUE_RASPBERRY_SETTINGS);
+    public static final RegistrySupplier<AliasedBlockItem> HOT_PEPPER_SEEDS =   registerAliasedBlockItem("hot_pepper_seeds", ModBlocks.HOT_PEPPER_CROP.get(), new Item.Settings());
     public static final RegistrySupplier<Item> HOT_PEPPER = registerItemViaSettings("hot_pepper", ModFoodComponents.HOT_PEPPER_SETTINGS);
 
     //Drinks
@@ -119,20 +121,26 @@ public class ModItems {
     public static final RegistrySupplier<Item> CARDBOARD_TRAY = registerSimpleItem("cardboard_tray");
 
     public static RegistrySupplier<Item> registerItemViaSettings(String name, Item.Settings settings){
-        var item = ITEMS.register(name, () -> new Item(settings));
-        CREATIVE_MODE_TAB.add(item.get());
+        var item = ITEMS.register(name, () -> new Item(settings.arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
         return item;
     }
 
     public static RegistrySupplier<Item> registerSimpleItem(String name) {
-        var item = ITEMS.register(name, ()-> new Item(new Item.Settings()));
-        CREATIVE_MODE_TAB.add(item.get());
+        var item = ITEMS.register(name, ()-> new Item(new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
         return item;
     }
 
     public static RegistrySupplier<Item> registerItem(String name, Item item){
         var registeredItem = ITEMS.register(name, ()-> item);
-        CREATIVE_MODE_TAB.add(registeredItem.get());
+        return registeredItem;
+    }
+
+    public static RegistrySupplier<AliasedBlockItem> registerAliasedBlockItem(String name, Block block, Item.Settings settings){
+        var registeredItem = ITEMS.register(name,
+                () -> new AliasedBlockItem(
+                        block,
+                        settings.arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)
+                ));
         return registeredItem;
     }
 

@@ -58,7 +58,7 @@ public class BlueRaspberryBushBlock extends PlantBlock implements Fertilizable {
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
         }
         else if (!world.getBiome(pos).isIn(GROWABLE_BIOMES)){
-            ItemStack blue_raspberry = new ItemStack(ModItems.BLUE_RASPBERRY, 1);
+            ItemStack blue_raspberry = new ItemStack(ModItems.BLUE_RASPBERRY.get(), 1);
             ItemEntity blue_raspberry_entity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), blue_raspberry);
             world.spawnEntity(blue_raspberry_entity);
             world.syncWorldEvent(2001, pos, Block.getRawIdFromState(state));

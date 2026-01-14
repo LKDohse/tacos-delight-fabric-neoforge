@@ -65,7 +65,7 @@ public class LimeTreeBlock extends TallPlantBlock implements Fertilizable {
         boolean bl = i == 3;
         if (i >= HARVEST_AGE) {
             int j = 2 + world.random.nextInt(3);
-            dropStack(world, pos, new ItemStack(ModItems.LIME, j + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(ModItems.LIME.get(), j + (bl ? 1 : 0)));
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             BlockState blockState = state.with(AGE, ADULT_AGE);
             world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
@@ -131,7 +131,7 @@ public class LimeTreeBlock extends TallPlantBlock implements Fertilizable {
             world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
             world.setBlockState(pos.up(), blockState.with(HALF, DoubleBlockHalf.UPPER), Block.NOTIFY_ALL);
         } else if (!world.getBiome(pos).isIn(GROWABLE_BIOMES)) {
-            ItemStack lime = new ItemStack(ModItems.LIME, 1);
+            ItemStack lime = new ItemStack(ModItems.LIME.get(), 1);
             ItemEntity lime_entity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), lime);
             world.spawnEntity(lime_entity);
             world.syncWorldEvent(2001, pos, Block.getRawIdFromState(state));
