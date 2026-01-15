@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,cooking=false": { "model": "tacosdelight:block/deep_fryer", "y": 0 },
+    "facing=south,cooking=false": { "model": "tacosdelight:block/deep_fryer", "y": 180},
+    "facing=west,cooking=false":  { "model": "tacosdelight:block/deep_fryer", "y": 90 },
+    "facing=east,cooking=false":  { "model": "tacosdelight:block/deep_fryer", "y": 270 },
+    "facing=north,cooking=true": { "model": "tacosdelight:block/deep_fryer_cooking", "y": 0 },
+    "facing=south,cooking=true": { "model": "tacosdelight:block/deep_fryer_cooking", "y": 180},
+    "facing=west,cooking=true":  { "model": "tacosdelight:block/deep_fryer_cooking", "y": 90 },
+    "facing=east,cooking=true":  { "model": "tacosdelight:block/deep_fryer_cooking", "y": 270 }
+  }
+}

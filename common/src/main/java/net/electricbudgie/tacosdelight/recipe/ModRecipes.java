@@ -26,7 +26,7 @@ public class ModRecipes {
             () -> new RecipeType<DeepFryerRecipe>() {
                 @Override
                 public String toString(){
-                    return "tacos-delight:deepfrying";
+                    return "tacosdelight:deepfrying";
                 }
             });
 

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tacosdelight:block/halite_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tacosdelight:block/halite"
+    },
+    "axis=z": {
+      "model": "tacosdelight:block/halite_horizontal",
+      "x": 90
+    }
+  }
+}

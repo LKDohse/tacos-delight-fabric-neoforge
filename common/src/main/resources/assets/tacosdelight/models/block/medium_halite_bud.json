@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "tacosdelight:block/medium_halite_bud"
+  }
+,
+  "render_type": "cutout"
+}
