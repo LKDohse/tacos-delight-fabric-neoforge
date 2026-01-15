@@ -28,10 +28,10 @@ public class ModBlocks {
     public static final RegistrySupplier<Block> HOT_PEPPER_CROP = registerBlock("hot_pepper_plant", new HotPepperCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT)));
 
     //Feast Blocks
-//    public static final RegistrySupplier<Block> BEEF_TACO_BOX_BLOCK = registerBlock("beef_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
-//    public static final RegistrySupplier<Block> CHICKEN_TACO_BOX_BLOCK = registerBlock("chicken_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
-//    public static final RegistrySupplier<Block> POTATO_TACO_BOX_BLOCK = registerBlock("potato_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
-//
+    public static final RegistrySupplier<Block> BEEF_TACO_BOX_BLOCK = registerBlock("beef_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
+    public static final RegistrySupplier<Block> CHICKEN_TACO_BOX_BLOCK = registerBlock("chicken_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
+    public static final RegistrySupplier<Block> POTATO_TACO_BOX_BLOCK = registerBlock("potato_taco_box", new TacoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
+
     public static final RegistrySupplier<Block> BEEF_BURRITO_BOX_BLOCK = registerBlock("beef_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
     public static final RegistrySupplier<Block> CHICKEN_BURRITO_BOX_BLOCK = registerBlock("chicken_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
     public static final RegistrySupplier<Block> POTATO_BURRITO_BOX_BLOCK = registerBlock("potato_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));

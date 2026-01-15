@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.IntProperty;
@@ -74,6 +75,7 @@ public abstract class FoodTrayBlock extends Block {
         int currentServingsRemaining = state.get(getServingsProperty());
         if (FoodTrayBlockLogic.canServe(currentServingsRemaining)) {
             giveOrDropItem(player, getServingItem(currentServingsRemaining));
+            world.playSound(pos.getX(), pos.getY(), pos.getZ(), (SoundEvent) SoundEvents.ITEM_ARMOR_EQUIP_GENERIC.value(), SoundCategory.BLOCKS, 1f, 1f, true);
             setServingsProperty(FoodTrayBlockLogic.getRemainingServings(currentServingsRemaining), world, pos);
         } else {
             world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_WOOD_BREAK, SoundCategory.BLOCKS, 1f, 1f, true);

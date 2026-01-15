@@ -13,6 +13,7 @@ public final class TacosDelight {
     public static void init() {
         ModCreativeTabs.initTabs();
         ModComponents.initialize();
+        //ModEffects.registerEffects();
         ModBlocks.initialize();
         ModItems.initialize();
         // Write common init code here.
