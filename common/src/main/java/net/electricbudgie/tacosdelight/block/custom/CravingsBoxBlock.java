@@ -15,9 +15,10 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.function.Supplier;
 
-public class TacoBoxBlock extends FoodTrayBlock {
+public class CravingsBoxBlock extends FoodTrayBlock{
     public static final IntProperty SERVINGS;
 
     protected static final VoxelShape PLATE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 2.0D, 15.0D);
@@ -26,13 +27,20 @@ public class TacoBoxBlock extends FoodTrayBlock {
             Block.createCuboidShape(2.0D, 2.0D, 2.0D, 14.0D, 4.0D, 14.0D)
     );
 
-    private static Supplier<Item> foodItemSupplier(ModFoodComponents.FillingType fillingType) {
-        return ModItemSuppliers.get(ModFoodComponents.FoodType.TACO, fillingType);
-    }
+    public CravingsBoxBlock(AbstractBlock.Settings properties, ModFoodComponents.FillingType fillingType, boolean hasLeftovers){
+        super(properties, hasLeftovers);
+        this.servings = new ArrayList<>();
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.QUESADILLA, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.TACO, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.BURRITO, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.CRUNCHWRAP, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.QUESADILLA, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.TACO, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.BURRITO, fillingType));
+        servings.add(ModItemSuppliers.get(ModFoodComponents.FoodType.CRUNCHWRAP, fillingType));
 
-    public TacoBoxBlock(AbstractBlock.Settings properties, ModFoodComponents.FillingType fillingType, boolean hasLeftovers){
-        super(properties, foodItemSupplier(fillingType), 6, hasLeftovers);
-        this.setDefaultState(this.getStateManager().getDefaultState().with(SERVINGS, 6));
+        this.setDefaultState(this.getStateManager().getDefaultState()
+                .with(SERVINGS, 8));
     }
 
     @Override
@@ -57,6 +65,7 @@ public class TacoBoxBlock extends FoodTrayBlock {
     }
 
     static {
-        SERVINGS = IntProperty.of("servings", 0, 6);
+        SERVINGS = IntProperty.of("servings", 0, 8);
     }
+
 }

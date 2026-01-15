@@ -30,6 +30,10 @@ public class ModItems {
     public static final RegistrySupplier<Item> CHICKEN_TACO_BOX_BLOCK_ITEM = registerItem("chicken_taco_box", new BlockItem(ModBlocks.CHICKEN_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
     public static final RegistrySupplier<Item> POTATO_TACO_BOX_BLOCK_ITEM = registerItem("potato_taco_box", new BlockItem(ModBlocks.POTATO_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
+    public static final RegistrySupplier<Item> BEEF_CRAVINGS_BOX_BLOCK_ITEM = registerItem("beef_cravings_box", new BlockItem(ModBlocks.BEEF_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHICKEN_CRAVINGS_BOX_BLOCK_ITEM = registerItem("chicken_cravings_box", new BlockItem(ModBlocks.CHICKEN_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> POTATO_CRAVINGS_BOX_BLOCK_ITEM = registerItem("potato_cravings_box", new BlockItem(ModBlocks.POTATO_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+
     //Ores and Ore-related Items
     public static final RegistrySupplier<Item> SALT = registerItemViaSettings("salt", ModFoodComponents.SALT);
     public static final RegistrySupplier<Item> ROCK_SALT_CRYSTALS = registerSimpleItem("rock_salt_crystals");

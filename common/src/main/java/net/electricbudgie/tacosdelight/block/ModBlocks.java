@@ -35,10 +35,10 @@ public class ModBlocks {
     public static final RegistrySupplier<Block> BEEF_BURRITO_BOX_BLOCK = registerBlock("beef_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
     public static final RegistrySupplier<Block> CHICKEN_BURRITO_BOX_BLOCK = registerBlock("chicken_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
     public static final RegistrySupplier<Block> POTATO_BURRITO_BOX_BLOCK = registerBlock("potato_burrito_box", new BurritoBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
-//
-//    public static final RegistrySupplier<Block> BEEF_CRAVINGS_BLOCK_BOX = registerBlock("beef_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
-//    public static final RegistrySupplier<Block> CHICKEN_CRAVINGS_BLOCK_BOX = registerBlock("chicken_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
-//    public static final RegistrySupplier<Block> POTATO_CRAVINGS_BLOCK_BOX = registerBlock("potato_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
+
+    public static final RegistrySupplier<Block> BEEF_CRAVINGS_BOX_BLOCK = registerBlock("beef_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.BEEF, true));
+    public static final RegistrySupplier<Block> CHICKEN_CRAVINGS_BOX_BLOCK = registerBlock("chicken_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.CHICKEN, true));
+    public static final RegistrySupplier<Block> POTATO_CRAVINGS_BOX_BLOCK = registerBlock("potato_cravings_box", new CravingsBoxBlock(AbstractBlock.Settings.copy(Blocks.CAKE), ModFoodComponents.FillingType.POTATO, true));
 
     //Entities
     public static final RegistrySupplier<Block> CHEESE_WHEEL_BLOCK = registerBlock("cheese_wheel",

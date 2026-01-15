@@ -46,9 +46,8 @@ public abstract class FoodTrayBlock extends Block {
     protected List<Supplier<Item>> servings;
     public final boolean hasLeftovers;
 
-    public FoodTrayBlock(AbstractBlock.Settings properties, List<Supplier<Item>> servings, boolean hasLeftovers) {
+    public FoodTrayBlock(AbstractBlock.Settings properties, boolean hasLeftovers) {
         super(properties);
-        this.servings = servings;
         this.hasLeftovers = hasLeftovers;
     }
 
