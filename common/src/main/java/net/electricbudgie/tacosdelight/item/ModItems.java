@@ -11,6 +11,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 
+import java.util.function.Supplier;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(TacosDelight.MOD_ID, RegistryKeys.ITEM);
@@ -20,29 +22,29 @@ public class ModItems {
     //public static final RegistrySupplier<Item> CHEESE_PRESS_ITEM = registerItem("cheese_press", new BlockItem(ModBlocks.CHEESE_PRESS_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
     //public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItem("cheese_wheel", new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0).arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
-    public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItem("halite", new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItemSupplier("halite", () -> new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
-    public static final RegistrySupplier<Item> BEEF_BURRITO_BOX_BLOCK_ITEM = registerItem("beef_burrito_box", new BlockItem(ModBlocks.BEEF_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> CHICKEN_BURRITO_BOX_BLOCK_ITEM = registerItem("chicken_burrito_box", new BlockItem(ModBlocks.CHICKEN_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> POTATO_BURRITO_BOX_BLOCK_ITEM = registerItem("potato_burrito_box", new BlockItem(ModBlocks.POTATO_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> BEEF_BURRITO_BOX_BLOCK_ITEM = registerItemSupplier("beef_burrito_box", () -> new BlockItem(ModBlocks.BEEF_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHICKEN_BURRITO_BOX_BLOCK_ITEM = registerItemSupplier("chicken_burrito_box", () -> new BlockItem(ModBlocks.CHICKEN_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> POTATO_BURRITO_BOX_BLOCK_ITEM = registerItemSupplier("potato_burrito_box",() -> new BlockItem(ModBlocks.POTATO_BURRITO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
-    public static final RegistrySupplier<Item> BEEF_TACO_BOX_BLOCK_ITEM = registerItem("beef_taco_box", new BlockItem(ModBlocks.BEEF_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> CHICKEN_TACO_BOX_BLOCK_ITEM = registerItem("chicken_taco_box", new BlockItem(ModBlocks.CHICKEN_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> POTATO_TACO_BOX_BLOCK_ITEM = registerItem("potato_taco_box", new BlockItem(ModBlocks.POTATO_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> BEEF_TACO_BOX_BLOCK_ITEM = registerItemSupplier("beef_taco_box",() -> new BlockItem(ModBlocks.BEEF_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHICKEN_TACO_BOX_BLOCK_ITEM = registerItemSupplier("chicken_taco_box",() -> new BlockItem(ModBlocks.CHICKEN_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> POTATO_TACO_BOX_BLOCK_ITEM = registerItemSupplier("potato_taco_box",() -> new BlockItem(ModBlocks.POTATO_TACO_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
-    public static final RegistrySupplier<Item> BEEF_CRAVINGS_BOX_BLOCK_ITEM = registerItem("beef_cravings_box", new BlockItem(ModBlocks.BEEF_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> CHICKEN_CRAVINGS_BOX_BLOCK_ITEM = registerItem("chicken_cravings_box", new BlockItem(ModBlocks.CHICKEN_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    public static final RegistrySupplier<Item> POTATO_CRAVINGS_BOX_BLOCK_ITEM = registerItem("potato_cravings_box", new BlockItem(ModBlocks.POTATO_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> BEEF_CRAVINGS_BOX_BLOCK_ITEM = registerItemSupplier("beef_cravings_box",() -> new BlockItem(ModBlocks.BEEF_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHICKEN_CRAVINGS_BOX_BLOCK_ITEM = registerItemSupplier("chicken_cravings_box",() -> new BlockItem(ModBlocks.CHICKEN_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> POTATO_CRAVINGS_BOX_BLOCK_ITEM = registerItemSupplier("potato_cravings_box",() -> new BlockItem(ModBlocks.POTATO_CRAVINGS_BOX_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     //Ores and Ore-related Items
     public static final RegistrySupplier<Item> SALT = registerItemViaSettings("salt", ModFoodComponents.SALT);
     public static final RegistrySupplier<Item> ROCK_SALT_CRYSTALS = registerSimpleItem("rock_salt_crystals");
 
     //Basic Ingredients
-    public static final RegistrySupplier<Item> DICED_TOMATOES = registerItemViaSettings("diced_tomatoes", ModFoodComponents.DICED_TOMATOES_SETTINGS);
-    public static final RegistrySupplier<Item> DRIED_CHILI = registerItemViaSettings("dried_chili", ModFoodComponents.DRIED_CHILI_SETTINGS);
-    public static final RegistrySupplier<Item> DRIED_ONION = registerItemViaSettings("dried_onion", ModFoodComponents.DRIED_ONION_SETTINGS);
-    public static final RegistrySupplier<Item> FLOUR_TORTILLA = registerItemViaSettings("flour_tortilla", ModFoodComponents.FLOUR_TORTILLA_SETTINGS);
+    public static final RegistrySupplier<Item> DICED_TOMATOES = registerItemViaSettings("diced_tomatoes",ModFoodComponents.DICED_TOMATOES_SETTINGS);
+    public static final RegistrySupplier<Item> DRIED_CHILI = registerItemViaSettings("dried_chili",ModFoodComponents.DRIED_CHILI_SETTINGS);
+    public static final RegistrySupplier<Item> DRIED_ONION = registerItemViaSettings("dried_onion",ModFoodComponents.DRIED_ONION_SETTINGS);
+    public static final RegistrySupplier<Item> FLOUR_TORTILLA = registerItemViaSettings("flour_tortilla",ModFoodComponents.FLOUR_TORTILLA_SETTINGS);
     public static final RegistrySupplier<Item> NACHO_CHEESE = registerItemViaSettings("nacho_cheese", ModFoodComponents.NACHO_CHEESE_SETTINGS);
     public static final RegistrySupplier<Item> SHREDDED_CHEESE = registerItemViaSettings("shredded_cheese", ModFoodComponents.SHREDDED_CHEESE_SETTINGS);
     public static final RegistrySupplier<Item> DICED_POTATO = registerItemViaSettings("diced_potato", ModFoodComponents.DICED_POTATO_SETTINGS);
@@ -74,11 +76,12 @@ public class ModItems {
     public static final RegistrySupplier<Item> UNCOOKED_POTATO_QUESADILLA = registerItemViaSettings("uncooked_potato_quesadilla", ModFoodComponents.UNCOOKED_POTATO_QUESADILLA_SETTINGS);
     public static final RegistrySupplier<Item> UNCOOKED_CHICKEN_CRUNCHWRAP = registerItemViaSettings("uncooked_chicken_crunchwrap", ModFoodComponents.UNCOOKED_CHICKEN_CRUNCHWRAP_SETTINGS);
     public static final RegistrySupplier<Item> UNCOOKED_BEEF_CRUNCHWRAP = registerItemViaSettings("uncooked_beef_crunchwrap", ModFoodComponents.UNCOOKED_BEEF_CRUNCHWRAP_SETTINGS);
-    public static final RegistrySupplier<Item> UNCOOKED_POTATO_CRUNCHWRAP = registerItemViaSettings("uncooked_potato_crunchwrap", ModFoodComponents.UNCOOKED_POTATO_CRUNCHWRAP_SETTINGS);
+    public static final RegistrySupplier<Item> UNCOOKED_POTATO_CRUNCHWRAP = registerItemViaSettings("uncooked_potato_crunchwrap",ModFoodComponents.UNCOOKED_POTATO_CRUNCHWRAP_SETTINGS);
     public static final RegistrySupplier<Item> TORTILLA_WITH_CHEESE= registerItemViaSettings("tortilla_with_cheese", ModFoodComponents.TORTILLA_WITH_CHEESE_SETTINGS);
     public static final RegistrySupplier<Item> UNCOOKED_CHEESY_POTATO_GRILLER= registerItemViaSettings("uncooked_cheesy_potato_griller", ModFoodComponents.UNCOOKED_CHEESY_POTATO_GRILLER_SETTINGS);
     public static final RegistrySupplier<Item> UNCOOKED_CHICKEN_TAQUITO = registerItemViaSettings("uncooked_chicken_taquito", ModFoodComponents.UNCOOKED_CHICKEN_TAQUITO_SETTINGS);
     public static final RegistrySupplier<Item> UNCOOKED_STEAK_TAQUITO = registerItemViaSettings("uncooked_steak_taquito", ModFoodComponents.UNCOOKED_STEAK_TAQUITO_SETTINGS);
+
     public static final RegistrySupplier<Item> UNCOOKED_CARAMEL_APPLE_EMPANADA = registerItemViaSettings("uncooked_caramel_apple_empanada", ModFoodComponents.UNCOOKED_CARAMEL_APPLE_EMPANADA);
 
     //Sides
@@ -114,9 +117,9 @@ public class ModItems {
     public static final RegistrySupplier<Item> POTATO_CRUNCHWRAP = registerItemViaSettings("potato_crunchwrap", ModFoodComponents.POTATO_CRUNCHWRAP_SETTINGS);
 
     //Crops
-    public static final RegistrySupplier<AliasedBlockItem> LIME = registerAliasedBlockItem("lime", ModBlocks.LIME_TREE.get(), ModFoodComponents.LIME_SETTINGS);
-    public static final RegistrySupplier<AliasedBlockItem> BLUE_RASPBERRY =  registerAliasedBlockItem("blue_raspberry", ModBlocks.BLUE_RASPBERRY_BUSH.get(), ModFoodComponents.BLUE_RASPBERRY_SETTINGS);
-    public static final RegistrySupplier<AliasedBlockItem> HOT_PEPPER_SEEDS =   registerAliasedBlockItem("hot_pepper_seeds", ModBlocks.HOT_PEPPER_CROP.get(), new Item.Settings());
+    public static final RegistrySupplier<AliasedBlockItem> LIME = registerAliasedBlockItem("lime", ModBlocks.LIME_TREE, ModFoodComponents.LIME_SETTINGS);
+    public static final RegistrySupplier<AliasedBlockItem> BLUE_RASPBERRY =  registerAliasedBlockItem("blue_raspberry", ModBlocks.BLUE_RASPBERRY_BUSH, ModFoodComponents.BLUE_RASPBERRY_SETTINGS);
+    public static final RegistrySupplier<AliasedBlockItem> HOT_PEPPER_SEEDS =   registerAliasedBlockItem("hot_pepper_seeds", ModBlocks.HOT_PEPPER_CROP, () -> new Item.Settings());
     public static final RegistrySupplier<Item> HOT_PEPPER = registerItemViaSettings("hot_pepper", ModFoodComponents.HOT_PEPPER_SETTINGS);
 
     //Drinks
@@ -126,8 +129,8 @@ public class ModItems {
     //Uncategorized
     public static final RegistrySupplier<Item> CARDBOARD_TRAY = registerSimpleItem("cardboard_tray");
 
-    public static RegistrySupplier<Item> registerItemViaSettings(String name, Item.Settings settings){
-        var item = ITEMS.register(name, () -> new Item(settings.arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static RegistrySupplier<Item> registerItemViaSettings(String name, Supplier<Item.Settings> settings){
+        var item = ITEMS.register(name, () -> new Item(settings.get().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
         return item;
     }
 
@@ -136,20 +139,19 @@ public class ModItems {
         return item;
     }
 
-    public static RegistrySupplier<Item> registerItem(String name, Item item){
-        var registeredItem = ITEMS.register(name, ()-> item);
+    public static RegistrySupplier<Item> registerItemSupplier(String name, Supplier<Item> supplier){
+        var registeredItem = ITEMS.register(name, supplier);
         return registeredItem;
     }
 
-    public static RegistrySupplier<AliasedBlockItem> registerAliasedBlockItem(String name, Block block, Item.Settings settings){
+    public static RegistrySupplier<AliasedBlockItem> registerAliasedBlockItem(String name, RegistrySupplier<? extends Block> block, Supplier<Item.Settings> settings){
         var registeredItem = ITEMS.register(name,
                 () -> new AliasedBlockItem(
-                        block,
-                        settings.arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)
+                        block.get(),
+                        settings.get().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)
                 ));
         return registeredItem;
     }
-
 
     public static void initialize() {
         ITEMS.register();

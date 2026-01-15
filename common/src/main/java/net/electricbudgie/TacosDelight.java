@@ -2,6 +2,7 @@ package net.electricbudgie;
 
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.components.ModComponents;
+import net.electricbudgie.tacosdelight.effect.ModEffects;
 import net.electricbudgie.tacosdelight.item.ModItems;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ public final class TacosDelight {
     public static void init() {
         ModCreativeTabs.initTabs();
         ModComponents.initialize();
-        //ModEffects.registerEffects();
+        ModEffects.registerEffects();
         ModBlocks.initialize();
         ModItems.initialize();
         // Write common init code here.
