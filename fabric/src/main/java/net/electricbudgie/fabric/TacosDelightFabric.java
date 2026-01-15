@@ -1,6 +1,7 @@
 package net.electricbudgie.fabric;
 
 import net.electricbudgie.fabric.tacosdelight.ModParticlesFabric;
+import net.electricbudgie.fabric.tacosdelight.datagen.worldgen.ModWorldGeneration;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
 
@@ -18,5 +19,7 @@ public final class TacosDelightFabric implements ModInitializer {
 
         ModParticlesFabric.register();
         ModParticles.initialize();
+        ModWorldGeneration.generateModWorldGeneration();
+        TacosDelight.LOGGER.info("Initializing Fabric implementation of Tacos Delight!");
     }
 }

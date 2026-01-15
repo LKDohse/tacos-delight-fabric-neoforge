@@ -5,10 +5,8 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.custom.*;
 import net.electricbudgie.tacosdelight.item.ModFoodComponents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.RegistryKeys;
 
 public class ModBlocks {
@@ -20,7 +18,7 @@ public class ModBlocks {
     public static final RegistrySupplier<Block> HALITE = registerBlock("halite", new PillarBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_PILLAR)));
 
     //Wild Crops
-    //public static final RegistrySupplier<Block> WILD_HOT_PEPPERS = registerBlock("wild_hot_pepper", new WildCropBlock(StatusEffects.WEAKNESS,6, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
+    public static final RegistrySupplier<Block> WILD_HOT_PEPPERS = registerBlock("wild_hot_pepper", new WildCropBlock(null, AbstractBlock.Settings.copy(Blocks.TALL_GRASS)));
 
     //Crops
     public static final RegistrySupplier<Block> BLUE_RASPBERRY_BUSH = registerBlock("blue_raspberry_bush", new BlueRaspberryBushBlock(AbstractBlock.Settings.copy(Blocks.WHEAT)));
