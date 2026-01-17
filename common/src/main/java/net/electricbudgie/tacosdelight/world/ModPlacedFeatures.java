@@ -1,4 +1,4 @@
-package net.electricbudgie.neoforge.datagen.worldgen;
+package net.electricbudgie.tacosdelight.world;
 
 import net.electricbudgie.TacosDelight;
 import net.minecraft.registry.Registerable;

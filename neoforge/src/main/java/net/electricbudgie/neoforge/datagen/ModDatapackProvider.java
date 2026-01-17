@@ -2,8 +2,8 @@ package net.electricbudgie.neoforge.datagen;
 
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.neoforge.datagen.worldgen.ModBiomeModifiers;
-import net.electricbudgie.neoforge.datagen.worldgen.ModConfiguredFeatures;
-import net.electricbudgie.neoforge.datagen.worldgen.ModPlacedFeatures;
+import net.electricbudgie.tacosdelight.world.ModConfiguredFeatures;
+import net.electricbudgie.tacosdelight.world.ModPlacedFeatures;
 import net.minecraft.data.DataOutput;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;

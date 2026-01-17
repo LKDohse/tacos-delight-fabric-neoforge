@@ -1,7 +1,7 @@
-package net.electricbudgie.fabric.tacosdelight.datagen.worldgen;
+package net.electricbudgie.fabric.tacosdelight.world.gen;
 
-import net.electricbudgie.fabric.tacosdelight.worldgen.ModPlacedFeatures;
 import net.electricbudgie.tacosdelight.tags.ModTags;
+import net.electricbudgie.tacosdelight.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;

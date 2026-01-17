@@ -1,8 +1,8 @@
-package net.electricbudgie.fabric.tacosdelight.datagen.worldgen;
+package net.electricbudgie.fabric.tacosdelight.world.gen;
 
 public class ModWorldGeneration {
     public static void generateModWorldGeneration() {
-        ModGeodeGeneration.generateGeodes();
+       //ModGeodeGeneration.generateGeodes();
         ModOreGeneration.generateOres();
         ModVegetalGeneration.generateVegetation();
     }

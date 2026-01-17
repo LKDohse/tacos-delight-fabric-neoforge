@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#tacosdelight:is_snowy",
+  "features": "tacosdelight:blue_raspberry_bush_placed",
+  "step": "vegetal_decoration"
+}

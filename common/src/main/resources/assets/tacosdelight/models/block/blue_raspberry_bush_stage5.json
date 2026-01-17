@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
+  "render_type": "cutout",
   "textures": {
-    "crop": "tacosdelight:block/blue_raspberry_bush_stage5"
+    "cross": "tacosdelight:block/blue_raspberry_bush_stage5"
   }
 }

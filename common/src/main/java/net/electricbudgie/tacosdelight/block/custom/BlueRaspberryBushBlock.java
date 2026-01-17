@@ -131,7 +131,7 @@ public class BlueRaspberryBushBlock extends PlantBlock implements Fertilizable {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.FARMLAND) || floor.isIn(BlockTags.SNOW);
+        return floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.FARMLAND) || floor.isOf(Blocks.SNOW_BLOCK) || floor.isOf(Blocks.POWDER_SNOW);
     }
 
     @Override

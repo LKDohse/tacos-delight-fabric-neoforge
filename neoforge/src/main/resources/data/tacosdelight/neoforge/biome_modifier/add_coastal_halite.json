@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:beach", "minecraft:ocean"],
+  "features": "tacosdelight:coastal_halite",
+  "step": "underground_ores"
+}

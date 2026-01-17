@@ -1,4 +1,4 @@
-package net.electricbudgie.fabric.tacosdelight.worldgen;
+package net.electricbudgie.tacosdelight.world;
 
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.ModBlocks;

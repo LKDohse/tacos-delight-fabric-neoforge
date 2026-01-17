@@ -1,7 +1,7 @@
 package net.electricbudgie.fabric;
 
 import net.electricbudgie.fabric.tacosdelight.ModParticlesFabric;
-import net.electricbudgie.fabric.tacosdelight.datagen.worldgen.ModWorldGeneration;
+import net.electricbudgie.fabric.tacosdelight.world.gen.ModWorldGeneration;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
 

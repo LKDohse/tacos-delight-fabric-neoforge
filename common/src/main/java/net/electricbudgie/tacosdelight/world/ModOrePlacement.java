@@ -1,4 +1,4 @@
-package net.electricbudgie.neoforge.datagen.worldgen;
+package net.electricbudgie.tacosdelight.world;
 
 import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;

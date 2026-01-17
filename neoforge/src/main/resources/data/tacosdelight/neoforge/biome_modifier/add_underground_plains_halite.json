@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:plains",
+    "minecraft:savanna",
+  "minecraft:savanna_plateau",
+  "minecraft:windswept_savanna"],
+  "features": "tacosdelight:underground_plains_halite",
+  "step": "underground_ores"
+}

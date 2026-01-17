@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/crop",
+  "render_type": "cutout",
   "textures": {
     "crop": "tacosdelight:block/hot_pepper_plant_stage4"
   }

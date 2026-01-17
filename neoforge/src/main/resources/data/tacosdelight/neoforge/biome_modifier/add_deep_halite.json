@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "tacosdelight:deep_halite",
+  "step": "underground_ores"
+}
