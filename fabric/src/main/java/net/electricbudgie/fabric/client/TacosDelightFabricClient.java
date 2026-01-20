@@ -1,17 +1,11 @@
 package net.electricbudgie.fabric.client;
 
-import net.electricbudgie.fabric.tacosdelight.ModClientTickEvents;
 //import net.electricbudgie.fabric.tacosdelight.ModModelPredicateProvider;
+import net.electricbudgie.tacosdelight.client.ModClientTickEvents;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
-import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
-import net.electricbudgie.tacosdelight.particle.GassyParticle;
-import net.electricbudgie.tacosdelight.particle.ModParticles;
-import net.fabricmc.api.ClientModInitializer;
+        import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+        import net.minecraft.client.render.RenderLayer;
 
 public final class TacosDelightFabricClient implements ClientModInitializer {
     @Override
