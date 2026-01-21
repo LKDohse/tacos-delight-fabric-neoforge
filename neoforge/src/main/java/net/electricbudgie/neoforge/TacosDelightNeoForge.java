@@ -1,6 +1,7 @@
 package net.electricbudgie.neoforge;
 
 import net.electricbudgie.neoforge.datagen.DataGenerators;
+import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -13,9 +14,8 @@ public final class TacosDelightNeoForge {
         // Run our common setup.
 
         net.electricbudgie.TacosDelight.init();
-
-       // ModParticlesNeoForge.register();
-        //ModParticles.initialize();
+        ModParticlesNeoForge.register();
+        ModParticles.initialize();
 
 
     }
