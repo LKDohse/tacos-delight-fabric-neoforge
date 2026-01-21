@@ -7,13 +7,11 @@ import net.electricbudgie.tacosdelight.components.ModComponents;
 import net.electricbudgie.tacosdelight.particle.GassyParticle;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
 @Mod(value = TacosDelight.MOD_ID, dist = Dist.CLIENT)
