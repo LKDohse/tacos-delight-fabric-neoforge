@@ -1,14 +1,11 @@
 package net.electricbudgie.tacosdelight.effect;
 
-import net.electricbudgie.tacosdelight.particle.GassyParticle;
-import net.electricbudgie.tacosdelight.particle.GassyParticleEffect;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -45,7 +42,7 @@ public class GassyEffect extends StatusEffect {
         cloud.setRadius(0.5f);
         cloud.setRadiusGrowth(0.025f);
         cloud.setDuration(20);
-        cloud.setParticleType(new GassyParticleEffect());
+        cloud.setParticleType(ModParticles.GASSY_PARTICLE.get());
         cloud.addEffect(new StatusEffectInstance(ModEffects.GAS_CLOUD_DAMAGE, 1, 0));
         world.spawnEntity(cloud);
         world.playSound(null, entity.getBlockPos(),
