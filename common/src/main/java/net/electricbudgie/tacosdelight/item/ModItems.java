@@ -4,6 +4,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
+import net.electricbudgie.tacosdelight.components.ModComponents;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
@@ -20,7 +21,7 @@ public class ModItems {
     //Block Items
     //public static final RegistrySupplier<Item> DEEP_FRYER_ITEM = registerItem("deep_fryer", new BlockItem(ModBlocks.DEEP_FRYER.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
     //public static final RegistrySupplier<Item> CHEESE_PRESS_ITEM = registerItem("cheese_press", new BlockItem(ModBlocks.CHEESE_PRESS_BLOCK.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
-    //public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItem("cheese_wheel", new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0).arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+    public static final RegistrySupplier<Item> CHEESE_WHEEL_ITEM = registerItemSupplier("cheese_wheel", ()-> new BlockItem(ModBlocks.CHEESE_WHEEL_BLOCK.get(), new Item.Settings().component(ModComponents.AGE_COMPONENT.get(), 0).arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 
     public static final RegistrySupplier<Item> HALITE_BLOCK_ITEM = registerItemSupplier("halite", () -> new BlockItem(ModBlocks.HALITE.get(), new Item.Settings().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
 

@@ -14,7 +14,7 @@ public class ModComponents {
 
 
     public static final RegistrySupplier<ComponentType<Integer>> AGE_COMPONENT =
-            COMPONENTS.register(Identifier.of(TacosDelight.MOD_ID, "age"),
+            COMPONENTS.register( Identifier.of(TacosDelight.MOD_ID, "age"),
                     () -> ComponentType.<Integer>builder()
                             .codec(Codec.INT)
                             .build()
@@ -22,6 +22,6 @@ public class ModComponents {
 
     public static void initialize(){
         COMPONENTS.register();
-        TacosDelight.LOGGER.info("Registering components for ", TacosDelight.MOD_ID);
+        TacosDelight.LOGGER.info("Registering components for {}", TacosDelight.MOD_ID);
     }
 }
