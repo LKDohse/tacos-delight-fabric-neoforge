@@ -3,15 +3,15 @@
 
   "overrides": [
     {
-      "predicate": { "age": 0.0 } ,
+      "predicate": { "tacosdelight:age": 0.0 } ,
       "model": "tacosdelight:item/cheese_wheel_age0"
     },
     {
-      "predicate": { "age": 0.5 } ,
+      "predicate": { "tacosdelight:age": 0.5 } ,
       "model": "tacosdelight:item/cheese_wheel_age1"
     },
     {
-      "predicate": { "age": 1.0 },
+      "predicate": { "tacosdelight:age": 1.0 },
       "model": "tacosdelight:item/cheese_wheel_age2"
     }
   ]

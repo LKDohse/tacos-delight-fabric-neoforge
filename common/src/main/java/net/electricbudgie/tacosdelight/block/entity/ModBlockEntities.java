@@ -35,5 +35,6 @@ public class ModBlockEntities {
 
     public static void initialize(){
         BLOCK_ENTITIES.register();
+        TacosDelight.LOGGER.info("Registering block entities for {}", TacosDelight.MOD_ID);
     }
 }
