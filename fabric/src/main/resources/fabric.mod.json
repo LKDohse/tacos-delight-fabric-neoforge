@@ -19,7 +19,7 @@
       "net.electricbudgie.fabric.TacosDelightFabric"
     ],
     "client": [
-      "net.electricbudgie.fabric.client.TacosDelightFabricClient"
+      "net.electricbudgie.fabric.TacosDelightFabricClient"
     ]
   },
   "mixins": [

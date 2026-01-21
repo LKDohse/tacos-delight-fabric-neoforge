@@ -1,6 +1,7 @@
 package net.electricbudgie.neoforge;
 
-import net.electricbudgie.neoforge.datagen.DataGenerators;
+import net.electricbudgie.neoforge.data.DataGenerators;
+import net.electricbudgie.neoforge.particle.ModParticlesNeoForge;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;

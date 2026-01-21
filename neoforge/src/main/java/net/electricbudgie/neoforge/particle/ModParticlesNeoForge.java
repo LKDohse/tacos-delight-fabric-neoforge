@@ -1,4 +1,4 @@
-package net.electricbudgie.neoforge;
+package net.electricbudgie.neoforge.particle;
 
 
 import net.electricbudgie.tacosdelight.particle.ModParticles;

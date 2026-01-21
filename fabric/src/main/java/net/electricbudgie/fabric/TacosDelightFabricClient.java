@@ -1,4 +1,4 @@
-package net.electricbudgie.fabric.client;
+package net.electricbudgie.fabric;
 
 //import net.electricbudgie.fabric.tacosdelight.ModModelPredicateProvider;
 import net.electricbudgie.tacosdelight.client.ModClientTickEvents;

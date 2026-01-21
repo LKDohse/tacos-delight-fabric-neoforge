@@ -1,4 +1,4 @@
-package net.electricbudgie.neoforge.datagen;
+package net.electricbudgie.neoforge.data;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataOutput;

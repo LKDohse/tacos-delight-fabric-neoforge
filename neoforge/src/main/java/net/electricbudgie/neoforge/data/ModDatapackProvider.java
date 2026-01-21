@@ -1,7 +1,7 @@
-package net.electricbudgie.neoforge.datagen;
+package net.electricbudgie.neoforge.data;
 
 import net.electricbudgie.TacosDelight;
-import net.electricbudgie.neoforge.datagen.worldgen.ModBiomeModifiers;
+import net.electricbudgie.neoforge.world.ModBiomeModifiers;
 import net.electricbudgie.tacosdelight.world.ModConfiguredFeatures;
 import net.electricbudgie.tacosdelight.world.ModPlacedFeatures;
 import net.minecraft.data.DataOutput;
