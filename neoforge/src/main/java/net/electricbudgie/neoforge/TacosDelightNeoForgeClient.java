@@ -1,6 +1,8 @@
 package net.electricbudgie.neoforge;
 
 import net.electricbudgie.TacosDelight;
+import net.electricbudgie.neoforge.block.entity.NeoForgeModBlockEntities;
+import net.electricbudgie.neoforge.block.entity.renderer.CheesePressEntityRenderer;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.client.ModClientTickEvents;
 import net.electricbudgie.tacosdelight.components.ModComponents;
@@ -12,6 +14,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
 @Mod(value = TacosDelight.MOD_ID, dist = Dist.CLIENT)
@@ -19,6 +22,7 @@ public class TacosDelightNeoForgeClient {
     public TacosDelightNeoForgeClient(IEventBus modBus) {
         modBus.addListener(this::onClientSetup);
         modBus.addListener(this::registerParticleFactories);
+        modBus.addListener(this::registerRenderers);
     }
 
     private void onClientSetup(FMLClientSetupEvent event) {
@@ -45,6 +49,13 @@ public class TacosDelightNeoForgeClient {
                         default -> 0.0f;
                     };
                 }
+        );
+    }
+
+    public void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(
+                NeoForgeModBlockEntities.CHEESE_PRESS_BE.get(),
+                CheesePressEntityRenderer::new
         );
     }
 }

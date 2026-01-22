@@ -1,7 +1,7 @@
 package net.electricbudgie.fabric;
 
 import net.electricbudgie.fabric.tacosdelight.ModParticlesFabric;
-import net.electricbudgie.fabric.tacosdelight.block.FabricBlocks;
+import net.electricbudgie.fabric.tacosdelight.block.FabricModBlocks;
 import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
 import net.electricbudgie.fabric.tacosdelight.item.FabricModItems;
 import net.electricbudgie.fabric.tacosdelight.world.gen.ModWorldGeneration;
@@ -23,7 +23,7 @@ public final class TacosDelightFabric implements ModInitializer {
         TacosDelight.init();
 
         // Fabric-specific Setup
-        FabricBlocks.initialize();
+        FabricModBlocks.initialize();
         FabricModBlockEntities.init();
         FabricModItems.initialize();
 

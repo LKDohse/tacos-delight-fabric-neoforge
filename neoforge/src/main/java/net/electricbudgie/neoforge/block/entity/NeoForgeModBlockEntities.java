@@ -1,21 +1,21 @@
-package net.electricbudgie.fabric.tacosdelight.block.entity;
+package net.electricbudgie.neoforge.block.entity;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
-import net.electricbudgie.fabric.tacosdelight.block.FabricModBlocks;
-import net.electricbudgie.fabric.tacosdelight.block.entity.custom.CheesePressBlockEntityFabric;
+import net.electricbudgie.neoforge.block.NeoForgeModBlocks;
+import net.electricbudgie.neoforge.block.entity.custom.CheesePressBlockEntityNeoForge;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.RegistryKeys;
 
-public class FabricModBlockEntities {
+public class NeoForgeModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(TacosDelight.MOD_ID, RegistryKeys.BLOCK_ENTITY_TYPE);
 
-    public static final RegistrySupplier<BlockEntityType<CheesePressBlockEntityFabric>> CHEESE_PRESS_BE =
+    public static final RegistrySupplier<BlockEntityType<CheesePressBlockEntityNeoForge>> CHEESE_PRESS_BE =
             BLOCK_ENTITIES.register("cheese_press",
-                    ()-> BlockEntityType.Builder.create(CheesePressBlockEntityFabric::new,
-                            FabricModBlocks.CHEESE_PRESS_BLOCK.get()).build(null));
+                    ()-> BlockEntityType.Builder.create(CheesePressBlockEntityNeoForge::new,
+                            NeoForgeModBlocks.CHEESE_PRESS_BLOCK.get()).build(null));
 
     public static void init() {
         BLOCK_ENTITIES.register();

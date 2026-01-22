@@ -9,7 +9,7 @@ import net.minecraft.registry.RegistryKeys;
 
 import java.util.function.Supplier;
 
-public class FabricBlocks {
+public class FabricModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(TacosDelight.MOD_ID, RegistryKeys.BLOCK);
 
