@@ -1,8 +1,8 @@
-package net.electricbudgie.tacosdelight.block.custom;
+package net.electricbudgie.fabric.tacosdelight.block;
 
 import com.mojang.serialization.MapCodec;
-import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
-import net.electricbudgie.tacosdelight.block.entity.custom.CheesePressBlockEntity;
+import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
+import net.electricbudgie.fabric.tacosdelight.block.entity.custom.CheesePressBlockEntityFabric;
 import net.electricbudgie.tacosdelight.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -47,7 +47,7 @@ public class CheesePressBlock extends BlockWithEntity {
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (stack.getItem() != ModItems.CURDS_AND_WHEY || state.get(PRESSING))
             return ItemActionResult.SUCCESS;
-        if (world.getBlockEntity(pos)instanceof CheesePressBlockEntity blockEntity) {
+        if (world.getBlockEntity(pos)instanceof CheesePressBlockEntityFabric blockEntity) {
             blockEntity.startPressing(pos, state);
             world.playSound(player, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS, 1f, 1f);
             stack.decrement(1);
@@ -58,7 +58,7 @@ public class CheesePressBlock extends BlockWithEntity {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.CHEESE_PRESS_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
+        return validateTicker(type, FabricModBlockEntities.CHEESE_PRESS_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
     }
 
     @Override
@@ -69,7 +69,7 @@ public class CheesePressBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CheesePressBlockEntity(pos, state);
+        return new CheesePressBlockEntityFabric(pos, state);
     }
 
     @Override

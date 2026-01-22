@@ -1,8 +1,8 @@
-package net.electricbudgie.tacosdelight.block.entity.custom;
+package net.electricbudgie.fabric.tacosdelight.block.entity.custom;
 
+import net.electricbudgie.fabric.tacosdelight.block.CheesePressBlock;
+import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
-import net.electricbudgie.tacosdelight.block.custom.CheesePressBlock;
-import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ItemEntity;
@@ -16,22 +16,29 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animatable.GeoAnimatable;
+import software.bernie.geckolib.animatable.GeoBlockEntity;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class CheesePressBlockEntity extends BlockEntity {
+public class CheesePressBlockEntityFabric extends BlockEntity implements GeoBlockEntity, GeoAnimatable {
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 12000;
     protected boolean pressing;
 
-    public CheesePressBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CHEESE_PRESS_BE.get(), pos, state);
+    public CheesePressBlockEntityFabric(BlockPos pos, BlockState state) {
+        super(FabricModBlockEntities.CHEESE_PRESS_BE.get(), pos, state);
 
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> CheesePressBlockEntity.this.progress;
-                    case 1 -> CheesePressBlockEntity.this.maxProgress;
+                    case 0 -> CheesePressBlockEntityFabric.this.progress;
+                    case 1 -> CheesePressBlockEntityFabric.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -40,9 +47,9 @@ public class CheesePressBlockEntity extends BlockEntity {
             public void set(int index, int value) {
                 switch (index) {
                     case 0:
-                        CheesePressBlockEntity.this.progress = value;
+                        CheesePressBlockEntityFabric.this.progress = value;
                     case 1:
-                        CheesePressBlockEntity.this.maxProgress = value;
+                        CheesePressBlockEntityFabric.this.maxProgress = value;
                 }
             }
 
@@ -77,28 +84,28 @@ public class CheesePressBlockEntity extends BlockEntity {
     }
 
     // Animation
-//
-//    private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
-//
-//    @Override
-//    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-//        controllers.add(new AnimationController<>(this,
-//                "baseController",
-//                0,
-//                state -> {
-//                    if (getCachedState().get(CheesePressBlock.PRESSING)){
-//                        return state.setAndContinue(RawAnimation.begin().thenPlayAndHold("press_down"));
-//                    }
-//                    else {
-//                        return state.setAndContinue(RawAnimation.begin().thenPlayAndHold("press_up"));
-//                    }
-//                }));
-//    }
-//
-//    @Override
-//    public AnimatableInstanceCache getAnimatableInstanceCache() {
-//        return geoCache;
-//    }
+
+    private final AnimatableInstanceCache geoCache = GeckoLibUtil.createInstanceCache(this);
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this,
+                "baseController",
+                0,
+                state -> {
+                    if (getCachedState().get(CheesePressBlock.PRESSING)){
+                        return state.setAndContinue(RawAnimation.begin().thenPlayAndHold("press_down"));
+                    }
+                    else {
+                        return state.setAndContinue(RawAnimation.begin().thenPlayAndHold("press_up"));
+                    }
+                }));
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return geoCache;
+    }
 
     // NBT reading/writing and network packets
     @Override
