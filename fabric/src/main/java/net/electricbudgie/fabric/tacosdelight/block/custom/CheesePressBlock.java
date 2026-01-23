@@ -1,4 +1,4 @@
-package net.electricbudgie.fabric.tacosdelight.block;
+package net.electricbudgie.fabric.tacosdelight.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;

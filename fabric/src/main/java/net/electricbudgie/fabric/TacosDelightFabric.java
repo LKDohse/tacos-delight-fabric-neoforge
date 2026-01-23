@@ -4,6 +4,7 @@ import net.electricbudgie.fabric.tacosdelight.ModParticlesFabric;
 import net.electricbudgie.fabric.tacosdelight.block.FabricModBlocks;
 import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
 import net.electricbudgie.fabric.tacosdelight.item.FabricModItems;
+import net.electricbudgie.fabric.tacosdelight.screen.FabricModScreenHandlers;
 import net.electricbudgie.fabric.tacosdelight.world.gen.ModWorldGeneration;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
@@ -31,6 +32,7 @@ public final class TacosDelightFabric implements ModInitializer {
         ModParticlesFabric.register();
         ModParticles.initialize();
         ModWorldGeneration.generateModWorldGeneration();
+        FabricModScreenHandlers.registerScreenHandlers();
         TacosDelight.LOGGER.info("Initializing Fabric implementation of Tacos Delight!");
     }
 
@@ -38,6 +40,7 @@ public final class TacosDelightFabric implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ModCreativeTabs.TACOS_DELIGHT_TAB_KEY)
                 .register(entries -> {
                    entries.add(FabricModItems.CHEESE_PRESS_ITEM.get());
+                   entries.add(FabricModItems.DEEP_FRYER_ITEM.get());
                 });
     }
 }

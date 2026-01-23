@@ -16,6 +16,7 @@ public class NeoForgeModItems {
 
     //Block Items
     public static final RegistrySupplier<Item> CHEESE_PRESS_ITEM = registerItemSupplier("cheese_press", ()-> new BlockItem(NeoForgeModBlocks.CHEESE_PRESS_BLOCK.get(), new Item.Settings()));
+    public static final RegistrySupplier<Item> DEEP_FRYER_ITEM = registerItemSupplier("deep_fryer", ()-> new BlockItem(NeoForgeModBlocks.DEEP_FRYER_BLOCK.get(), new Item.Settings()));
 
     public static RegistrySupplier<Item> registerItemSupplier(String name, Supplier<Item> supplier){
         var registeredItem = ITEMS.register(name, supplier);
