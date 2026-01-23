@@ -1,6 +1,6 @@
 package net.electricbudgie.fabric.tacosdelight.block.entity.custom;
 
-import net.electricbudgie.fabric.tacosdelight.block.CheesePressBlock;
+import net.electricbudgie.fabric.tacosdelight.block.custom.CheesePressBlock;
 import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.minecraft.block.BlockState;

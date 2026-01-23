@@ -4,6 +4,7 @@ import net.electricbudgie.neoforge.block.NeoForgeModBlocks;
 import net.electricbudgie.neoforge.block.entity.NeoForgeModBlockEntities;
 import net.electricbudgie.neoforge.data.DataGenerators;
 import net.electricbudgie.neoforge.item.NeoForgeModItems;
+import net.electricbudgie.neoforge.menu.NeoForgeModScreenHandlers;
 import net.electricbudgie.neoforge.particle.ModParticlesNeoForge;
 import net.electricbudgie.tacosdelight.particle.ModParticles;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
@@ -25,6 +26,7 @@ public final class TacosDelightNeoForge {
         NeoForgeModItems.initialize();
         ModParticlesNeoForge.register();
         ModParticles.initialize();
+        NeoForgeModScreenHandlers.register(modBus);
 
         modBus.addListener(this::addCreativeTabEntries);
 
@@ -36,6 +38,7 @@ public final class TacosDelightNeoForge {
     public void addCreativeTabEntries(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == ModCreativeTabs.TACOS_DELIGHT_TAB_KEY) {
             event.add(NeoForgeModItems.CHEESE_PRESS_ITEM.get());
+            event.add(NeoForgeModItems.DEEP_FRYER_ITEM.get());
         }
     }
 }
