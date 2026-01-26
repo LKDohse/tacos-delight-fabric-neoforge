@@ -5,8 +5,10 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.custom.*;
 import net.electricbudgie.tacosdelight.item.ModFoodComponents;
-import net.minecraft.block.*;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.registry.RegistryKeys;
 
 import java.util.function.Supplier;
@@ -43,10 +45,6 @@ public class ModBlocks {
     //Entities
     public static final RegistrySupplier<Block> CHEESE_WHEEL_BLOCK = registerBlock("cheese_wheel", () ->
             new CheeseWheelBlock((AbstractBlock.Settings.create().nonOpaque())));
-    public static final RegistrySupplier<Block> CHEESE_PRESS_BLOCK = registerBlock("cheese_press", () ->
-            new CheesePressBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
-
-    public static final RegistrySupplier<Block> DEEP_FRYER = registerBlock("deep_fryer", () ->  new DeepFryerBlock(AbstractBlock.Settings.create().strength(0.5f).nonOpaque()));
 
     public static void initialize() {
         BLOCKS.register();

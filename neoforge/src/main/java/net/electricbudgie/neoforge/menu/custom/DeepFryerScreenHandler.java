@@ -1,6 +1,7 @@
-package net.electricbudgie.tacosdelight.screen;
+package net.electricbudgie.neoforge.menu.custom;
 
-import net.electricbudgie.tacosdelight.block.entity.custom.DeepFryerBlockEntity;
+import net.electricbudgie.neoforge.block.entity.custom.DeepFryerBlockEntityNeoForge;
+import net.electricbudgie.neoforge.menu.NeoForgeModScreenHandlers;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -11,23 +12,24 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.math.BlockPos;
+import org.jetbrains.annotations.NotNull;
 
 public class DeepFryerScreenHandler extends ScreenHandler {
     public final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    public final DeepFryerBlockEntity blockEntity;
+    public final DeepFryerBlockEntityNeoForge blockEntity;
 
-    public DeepFryerScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
-        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
+
+    public DeepFryerScreenHandler(int syncId, PlayerInventory playerInventory, @NotNull PacketByteBuf buf){
+        this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(buf.readBlockPos()), new ArrayPropertyDelegate(2));
     }
 
     public DeepFryerScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate){
-        super(ModScreenHandlers.DEEP_FRYER_SCREEN_HANDLER.get(), syncId);
+        super(NeoForgeModScreenHandlers.DEEP_FRYER_HANDLER.get(), syncId);
         checkSize((Inventory)blockEntity, 2);
         this.inventory = (Inventory)blockEntity;
         this.propertyDelegate = arrayPropertyDelegate;
-        this.blockEntity = (DeepFryerBlockEntity)blockEntity;
+        this.blockEntity = (DeepFryerBlockEntityNeoForge)blockEntity;
 
         this.addSlot(new Slot(inventory, 0, 54, 34));
         this.addSlot(new Slot(inventory, 1, 104, 34));
@@ -37,11 +39,6 @@ public class DeepFryerScreenHandler extends ScreenHandler {
 
         addProperties(arrayPropertyDelegate);
     }
-
-    public DeepFryerScreenHandler(int syncId, PlayerInventory playerInventory, PacketByteBuf buf) {
-        this(syncId, playerInventory, buf.readBlockPos());
-    }
-
 
     @Override
     public boolean canUse(PlayerEntity player) {
@@ -99,3 +96,4 @@ public class DeepFryerScreenHandler extends ScreenHandler {
         return newStack;
     }
 }
+

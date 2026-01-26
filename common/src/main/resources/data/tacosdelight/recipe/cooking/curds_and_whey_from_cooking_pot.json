@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bucket"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {"item": "tacosdelight:salt"}
+  ],
+  "result": {
+    "id": "tacosdelight:curds_and_whey",
+    "count": 1
+  },
+  "cookingtime": 600,
+  "experience": 0.6
+}

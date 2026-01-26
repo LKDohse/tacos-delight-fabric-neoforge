@@ -1,4 +1,4 @@
-package net.electricbudgie.tacosdelight.screen;
+package net.electricbudgie.fabric.tacosdelight.screen;
 
 // From Kaupenjoe's Modding courses :)
 public class MouseUtil {

@@ -1,0 +1,14 @@
+{
+  "type": "tacosdelight:deepfrying",
+  "group": "tacosdelight",
+  "category": "food",
+  "experience": 0.2,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "tacosdelight:raw_tortilla_chips"
+  },
+  "result": {
+    "id": "tacosdelight:tortilla_chips",
+    "count": 1
+  }
+}

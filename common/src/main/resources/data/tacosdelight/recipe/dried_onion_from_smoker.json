@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": {
+    "tag": "tacosdelight:onions"
+  },
+  "result": {
+    "id": "tacosdelight:dried_onion"
+  }
+}

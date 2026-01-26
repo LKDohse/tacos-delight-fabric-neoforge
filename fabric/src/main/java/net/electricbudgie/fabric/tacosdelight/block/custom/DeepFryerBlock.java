@@ -1,9 +1,8 @@
-package net.electricbudgie.tacosdelight.block.custom;
+package net.electricbudgie.fabric.tacosdelight.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import dev.architectury.registry.menu.MenuRegistry;
-import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
-import net.electricbudgie.tacosdelight.block.entity.custom.DeepFryerBlockEntity;
+import net.electricbudgie.fabric.tacosdelight.block.entity.FabricModBlockEntities;
+import net.electricbudgie.fabric.tacosdelight.block.entity.custom.DeepFryerBlockEntityFabric;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -15,7 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -32,7 +31,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class DeepFryerBlock extends BlockWithEntity {
-
     public static final MapCodec<DeepFryerBlock> CODEC = createCodec(DeepFryerBlock::new);
     public static final BooleanProperty COOKING = BooleanProperty.of("cooking");
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
@@ -68,15 +66,15 @@ public class DeepFryerBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new DeepFryerBlockEntity(pos, state);
+        return new DeepFryerBlockEntityFabric(pos, state);
     }
 
     @Override
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof DeepFryerBlockEntity) {
-                ItemScatterer.spawn(world, pos, (DeepFryerBlockEntity) blockEntity);
+            if (blockEntity instanceof DeepFryerBlockEntityFabric) {
+                ItemScatterer.spawn(world, pos, (DeepFryerBlockEntityFabric) blockEntity);
                 world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -85,10 +83,12 @@ public class DeepFryerBlock extends BlockWithEntity {
 
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient && player instanceof ServerPlayerEntity serverPlayer && world.getBlockEntity(pos) instanceof DeepFryerBlockEntity be) {
-            MenuRegistry.openExtendedMenu(serverPlayer,
-                    be,
-                    buf -> buf.writeBlockPos(pos));
+        if (!world.isClient) {
+            NamedScreenHandlerFactory screenHandlerFactory = (DeepFryerBlockEntityFabric) world.getBlockEntity(pos);
+
+            if (screenHandlerFactory != null) {
+                player.openHandledScreen(screenHandlerFactory);
+            }
         }
         return ItemActionResult.SUCCESS;
     }
@@ -97,7 +97,7 @@ public class DeepFryerBlock extends BlockWithEntity {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         //this forces the class to use our manually defined tick method, also pretty boilerplate
-        return validateTicker(type, ModBlockEntities.DEEP_FRYER_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
+        return validateTicker(type, FabricModBlockEntities.DEEP_FRYER_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
     }
 
     @Override
@@ -108,15 +108,14 @@ public class DeepFryerBlock extends BlockWithEntity {
         double yPos = pos.getY() + 0.5f;
         double zPos = pos.getZ() + 0.5f;
 
-        if (random.nextDouble() > 0.15) {
+        if(random.nextDouble()> 0.15){
             world.playSound(xPos, yPos, zPos, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 0.5f, 5f, true);
         }
 
         double offset = random.nextDouble() * 0.6 - 0.3;
 
-        world.addParticle(ParticleTypes.SMOKE, xPos + offset, yPos + offset, zPos + offset, 0.0, 0.0, 0.0);
+        world.addParticle(ParticleTypes.SMOKE, xPos + offset, yPos + offset, zPos + offset, 0.0, 0.0,0.0);
 
     }
-
 }
 

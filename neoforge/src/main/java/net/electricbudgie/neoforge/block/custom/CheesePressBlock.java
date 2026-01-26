@@ -1,8 +1,8 @@
-package net.electricbudgie.tacosdelight.block.custom;
+package net.electricbudgie.neoforge.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
-import net.electricbudgie.tacosdelight.block.entity.custom.CheesePressBlockEntity;
+import net.electricbudgie.neoforge.block.entity.NeoForgeModBlockEntities;
+import net.electricbudgie.neoforge.block.entity.custom.CheesePressBlockEntityNeoForge;
 import net.electricbudgie.tacosdelight.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -45,11 +45,19 @@ public class CheesePressBlock extends BlockWithEntity {
 
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (stack.getItem() != ModItems.CURDS_AND_WHEY || state.get(PRESSING))
+        if (stack.getItem() != ModItems.CURDS_AND_WHEY.get() || state.get(PRESSING))
             return ItemActionResult.SUCCESS;
-        if (world.getBlockEntity(pos)instanceof CheesePressBlockEntity blockEntity) {
+        if (world.getBlockEntity(pos)instanceof CheesePressBlockEntityNeoForge blockEntity) {
             blockEntity.startPressing(pos, state);
             world.playSound(player, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS, 1f, 1f);
+
+            if (stack.getItem().getRecipeRemainder() != null)
+            {
+                ItemStack remainder = stack.getItem().getRecipeRemainder().getDefaultStack();
+                if(!player.giveItemStack(remainder)){
+                    player.dropItem(remainder, false);
+                }
+            }
             stack.decrement(1);
         }
         return ItemActionResult.SUCCESS;
@@ -58,7 +66,7 @@ public class CheesePressBlock extends BlockWithEntity {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.CHEESE_PRESS_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
+        return validateTicker(type, NeoForgeModBlockEntities.CHEESE_PRESS_BE.get(), ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
     }
 
     @Override
@@ -69,7 +77,7 @@ public class CheesePressBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CheesePressBlockEntity(pos, state);
+        return new CheesePressBlockEntityNeoForge(pos, state);
     }
 
     @Override

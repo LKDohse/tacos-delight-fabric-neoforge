@@ -1,6 +1,11 @@
 package net.electricbudgie.neoforge;
 
 import net.electricbudgie.TacosDelight;
+import net.electricbudgie.neoforge.block.entity.NeoForgeModBlockEntities;
+import net.electricbudgie.neoforge.block.entity.renderer.CheesePressEntityRenderer;
+import net.electricbudgie.neoforge.block.entity.renderer.DeepFryerRenderer;
+import net.electricbudgie.neoforge.menu.NeoForgeModScreenHandlers;
+import net.electricbudgie.neoforge.menu.custom.DeepFryerScreen;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.client.ModClientTickEvents;
 import net.electricbudgie.tacosdelight.components.ModComponents;
@@ -12,6 +17,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
 @Mod(value = TacosDelight.MOD_ID, dist = Dist.CLIENT)
@@ -19,6 +26,8 @@ public class TacosDelightNeoForgeClient {
     public TacosDelightNeoForgeClient(IEventBus modBus) {
         modBus.addListener(this::onClientSetup);
         modBus.addListener(this::registerParticleFactories);
+        modBus.addListener(this::registerRenderers);
+        modBus.addListener(this::registerScreens);
     }
 
     private void onClientSetup(FMLClientSetupEvent event) {
@@ -46,5 +55,21 @@ public class TacosDelightNeoForgeClient {
                     };
                 }
         );
+    }
+
+    public void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(
+                NeoForgeModBlockEntities.CHEESE_PRESS_BE.get(),
+                CheesePressEntityRenderer::new
+        );
+
+        event.registerBlockEntityRenderer(
+                NeoForgeModBlockEntities.DEEP_FRYER_BE.get(),
+                DeepFryerRenderer::new
+        );
+    }
+
+    public void registerScreens(RegisterMenuScreensEvent event){
+        event.register(NeoForgeModScreenHandlers.DEEP_FRYER_HANDLER.get(), DeepFryerScreen::new);
     }
 }
