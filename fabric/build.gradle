@@ -96,7 +96,7 @@ loom {
 sourceSets {
     main {
         resources {
-            srcDir 'src/main/generated'
+            srcDir "../common/src/main/generated/"
         }
     }
 }

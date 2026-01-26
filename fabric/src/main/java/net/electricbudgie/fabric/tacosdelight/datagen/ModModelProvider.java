@@ -2,9 +2,6 @@ package net.electricbudgie.fabric.tacosdelight.datagen;
 
 import net.electricbudgie.fabric.tacosdelight.block.FabricModBlocks;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
-import net.electricbudgie.tacosdelight.block.custom.BlueRaspberryBushBlock;
-import net.electricbudgie.tacosdelight.block.custom.HotPepperCropBlock;
-import net.electricbudgie.tacosdelight.block.custom.LimeTreeBlock;
 import net.electricbudgie.tacosdelight.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -27,12 +24,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.HALITE.get()).log(ModBlocks.HALITE.get());
 
         //Crops
-        blockStateModelGenerator.registerTintableCross(ModBlocks.WILD_HOT_PEPPERS.get(), BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerCrop(ModBlocks.BLUE_RASPBERRY_BUSH.get(), BlueRaspberryBushBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
-        blockStateModelGenerator.registerCrop(ModBlocks.HOT_PEPPER_CROP.get(), HotPepperCropBlock.AGE, 0,1,2,3,4,5);
-        registerTallPlant(blockStateModelGenerator, ModBlocks.LIME_TREE.get(), LimeTreeBlock.AGE);
+        //Have to manually write this at the moment, due to needing a cutout property for neoforge support :/
+//        blockStateModelGenerator.registerTintableCross(ModBlocks.WILD_HOT_PEPPERS.get(), BlockStateModelGenerator.TintType.NOT_TINTED);
+//        blockStateModelGenerator.registerCrop(ModBlocks.BLUE_RASPBERRY_BUSH.get(), BlueRaspberryBushBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
+//        blockStateModelGenerator.registerCrop(ModBlocks.HOT_PEPPER_CROP.get(), HotPepperCropBlock.AGE, 0,1,2,3,4,5);
+//        registerTallPlant(blockStateModelGenerator, ModBlocks.LIME_TREE.get(), LimeTreeBlock.AGE);
     }
-
 
 
     @Override
@@ -56,6 +53,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         // Basic Ingredients
         itemModelGenerator.register(ModItems.HOT_PEPPER.get(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOT_PEPPER_SEEDS.get(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLUE_RASPBERRY.get(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.LIME.get(), Models.GENERATED);
         itemModelGenerator.register(ModItems.DICED_TOMATOES.get(), Models.GENERATED);
         itemModelGenerator.register(ModItems.DRIED_CHILI.get(), Models.GENERATED);
         itemModelGenerator.register(ModItems.DRIED_ONION.get(), Models.GENERATED);
@@ -142,9 +142,9 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateVariantMap blockStateVariantMap = BlockStateVariantMap.create(ageProperty, Properties.DOUBLE_BLOCK_HALF).register((age, half) -> {
             return switch (half) {
                 case UPPER ->
-                        BlockStateVariant.create().put(VariantSettings.MODEL, ModelIds.getBlockSubModelId(plant,"_age" +age + "_upper"));
+                        BlockStateVariant.create().put(VariantSettings.MODEL, ModelIds.getBlockSubModelId(plant, "_age" + age + "_upper"));
                 case LOWER ->
-                        BlockStateVariant.create().put(VariantSettings.MODEL, ModelIds.getBlockSubModelId(plant, "_age" +age + "_lower"));
+                        BlockStateVariant.create().put(VariantSettings.MODEL, ModelIds.getBlockSubModelId(plant, "_age" + age + "_lower"));
             };
         });
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(plant).coordinate(blockStateVariantMap));
@@ -162,4 +162,6 @@ public class ModModelProvider extends FabricModelProvider {
                     );
                 });
     }
+
+
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "tacosdelight:block/blue_raspberry_bush_stage1"
-  }
-}

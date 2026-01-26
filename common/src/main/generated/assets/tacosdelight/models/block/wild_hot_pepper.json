@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "tacosdelight:block/wild_hot_pepper"
-  }
-}
