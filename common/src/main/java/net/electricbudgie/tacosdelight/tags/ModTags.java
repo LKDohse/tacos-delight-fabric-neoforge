@@ -13,7 +13,7 @@ public class ModTags {
     public static final TagKey<Biome> IS_WARM = createBiomeTag("is_warm");
     public static final TagKey<Biome> IS_COOL = createBiomeTag("is_cool");
 
-    public static final TagKey<Item> FD_KNIVES = createItemTag("fd_knives");
+    public static final TagKey<Item> KNIVES = createItemTag("knives");
 
     private static TagKey<Biome> createBiomeTag(String name){
         return TagKey.of(RegistryKeys.BIOME, Identifier.of(TacosDelight.MOD_ID, name));

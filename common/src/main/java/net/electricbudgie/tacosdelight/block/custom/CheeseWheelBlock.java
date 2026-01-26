@@ -6,6 +6,7 @@ import net.electricbudgie.tacosdelight.block.entity.ModBlockEntities;
 import net.electricbudgie.tacosdelight.block.entity.custom.CheeseWheelBlockEntity;
 import net.electricbudgie.tacosdelight.components.ModComponents;
 import net.electricbudgie.tacosdelight.item.ModItems;
+import net.electricbudgie.tacosdelight.tags.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -109,6 +110,6 @@ public class CheeseWheelBlock extends BlockWithEntity {
     }
 
     private boolean itemCanCutTheCheese(ItemStack stack) {
-        return false; //stack.isIn(ModTags.KNIVES);
+        return stack.isIn(ModTags.KNIVES);
     }
 }
