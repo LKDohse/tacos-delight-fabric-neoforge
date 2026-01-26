@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:apple_slices"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "tacosdelight:hand_pie_crust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:uncooked_caramel_apple_empanada"
+  }
+}

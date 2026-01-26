@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:beef_taco"
+    },
+    {
+      "item": "tacosdelight:cardboard_tray"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:beef_taco_box"
+  }
+}

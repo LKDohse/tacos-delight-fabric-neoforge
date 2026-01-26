@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "tacosdelight:cut_chicken"
+    },
+    {
+      "item": "tacosdelight:taco_seasoning"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:raw_taco_chicken"
+  }
+}

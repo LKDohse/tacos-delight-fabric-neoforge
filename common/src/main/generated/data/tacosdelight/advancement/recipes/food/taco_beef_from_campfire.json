@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_taco_beef": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:raw_taco_beef"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tacosdelight:taco_beef_from_campfire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_taco_beef"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tacosdelight:taco_beef_from_campfire"
+    ]
+  }
+}

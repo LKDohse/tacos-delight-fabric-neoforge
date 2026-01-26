@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:flour_tortilla"
+    },
+    {
+      "item": "tacosdelight:taco_beef"
+    },
+    {
+      "tag": "tacosdelight:shredded_cheese"
+    },
+    {
+      "item": "tacosdelight:sour_cream"
+    },
+    {
+      "item": "tacosdelight:diced_tomatoes"
+    },
+    {
+      "tag": "tacosdelight:leafy_greens"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:beef_taco"
+  }
+}

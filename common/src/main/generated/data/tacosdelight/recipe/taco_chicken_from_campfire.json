@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tacosdelight:raw_taco_chicken"
+  },
+  "result": {
+    "id": "tacosdelight:taco_chicken"
+  }
+}

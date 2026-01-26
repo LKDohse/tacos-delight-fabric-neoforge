@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hot_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:hot_pepper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tacosdelight:dried_chili_from_smoker"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hot_pepper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tacosdelight:dried_chili_from_smoker"
+    ]
+  }
+}

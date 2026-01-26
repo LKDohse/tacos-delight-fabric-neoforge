@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:chicken_taco"
+    },
+    {
+      "item": "tacosdelight:chicken_taco"
+    },
+    {
+      "item": "tacosdelight:chicken_burrito"
+    },
+    {
+      "item": "tacosdelight:chicken_burrito"
+    },
+    {
+      "item": "tacosdelight:chicken_crunchwrap"
+    },
+    {
+      "item": "tacosdelight:chicken_crunchwrap"
+    },
+    {
+      "item": "tacosdelight:chicken_quesadilla"
+    },
+    {
+      "item": "tacosdelight:chicken_quesadilla"
+    },
+    {
+      "item": "tacosdelight:cardboard_tray"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:chicken_cravings_box"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 400,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tacosdelight:uncooked_potato_crunchwrap"
+  },
+  "result": {
+    "id": "tacosdelight:potato_crunchwrap"
+  }
+}

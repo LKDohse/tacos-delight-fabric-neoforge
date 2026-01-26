@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:flour_tortilla"
+    },
+    {
+      "item": "tacosdelight:fried_fiesta_potatoes"
+    },
+    {
+      "tag": "tacosdelight:shredded_cheese"
+    },
+    {
+      "item": "tacosdelight:sour_cream"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:uncooked_potato_quesadilla"
+  }
+}

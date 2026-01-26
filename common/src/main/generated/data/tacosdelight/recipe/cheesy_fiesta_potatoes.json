@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:nacho_cheese"
+    },
+    {
+      "item": "tacosdelight:fried_fiesta_potatoes"
+    },
+    {
+      "item": "tacosdelight:sour_cream"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:cheesy_fiesta_potatoes"
+  }
+}
