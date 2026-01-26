@@ -5,6 +5,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.electricbudgie.TacosDelight;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.components.ModComponents;
+import net.electricbudgie.tacosdelight.item.custom.DrinkItem;
 import net.electricbudgie.tacosdelight.registry.ModCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.item.AliasedBlockItem;
@@ -124,8 +125,8 @@ public class ModItems {
     public static final RegistrySupplier<Item> HOT_PEPPER = registerItemViaSettings("hot_pepper", ModFoodComponents.HOT_PEPPER_SETTINGS);
 
     //Drinks
-    //public static final RegistrySupplier<Item> BAJA_BLAST_SYRUP = registerItem("baja_blast_syrup", new DrinkableItem(ModFoodComponents.BAJA_BLAST_SYRUP_SETTINGS));
-    //public static final RegistrySupplier<Item> BAJA_BLAST = registerItem("baja_blast", new DrinkableItem(ModFoodComponents.BAJA_BLAST_SETTINGS));
+    public static final RegistrySupplier<DrinkItem> BAJA_BLAST_SYRUP = registerDrinkItem("baja_blast_syrup", ModFoodComponents.BAJA_BLAST_SYRUP_SETTINGS);
+    public static final RegistrySupplier<DrinkItem> BAJA_BLAST = registerDrinkItem("baja_blast", ModFoodComponents.BAJA_BLAST_SETTINGS);
 
     //Uncategorized
     public static final RegistrySupplier<Item> CARDBOARD_TRAY = registerSimpleItem("cardboard_tray");
@@ -133,6 +134,11 @@ public class ModItems {
     public static RegistrySupplier<Item> registerItemViaSettings(String name, Supplier<Item.Settings> settings){
         var item = ITEMS.register(name, () -> new Item(settings.get().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
         return item;
+    }
+
+    public static final RegistrySupplier<DrinkItem> registerDrinkItem(String name, Supplier<Item.Settings> settings){
+        var drink = ITEMS.register(name, ()-> new DrinkItem(settings.get().arch$tab(ModCreativeTabs.TACOS_DELIGHT_TAB)));
+        return drink;
     }
 
     public static RegistrySupplier<Item> registerSimpleItem(String name) {
