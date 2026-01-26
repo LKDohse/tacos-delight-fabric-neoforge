@@ -58,34 +58,4 @@ public class ModEffects {
         EFFECTS.register();
         TacosDelight.LOGGER.info("Registering Mod Effects for " + TacosDelight.MOD_ID);
     }
-
-//    public static void bootstrap(Registerable<StatusEffect> ctx) {
-//
-//        ctx.register(DISAPPOINTED_KEY,
-//                new DisappointedEffect(StatusEffectCategory.HARMFUL, 0xbbbfbf)
-//                        .addAttributeModifier(
-//                                EntityAttributes.GENERIC_MOVEMENT_SPEED,
-//                                Identifier.of(TacosDelight.MOD_ID, "disappointed"),
-//                                -0.20f,
-//                                EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
-//
-//        ctx.register(GAS_CLOUD_DAMAGE_KEY,
-//                new GasCloudDamageEffect(StatusEffectCategory.HARMFUL, 0x7d5011));
-//
-//        ctx.register(GASSY_KEY,
-//                new GassyEffect(StatusEffectCategory.HARMFUL, 0x7d5011));
-//
-//        ctx.register(SPICY_KEY,
-//                new SpicyEffect(StatusEffectCategory.NEUTRAL, 0x850900)
-//                        .addAttributeModifier(
-//                                EntityAttributes.GENERIC_ATTACK_DAMAGE,
-//                                Identifier.of(TacosDelight.MOD_ID, "spicy"),
-//                                2.0f,
-//                                EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-//                        .addAttributeModifier(
-//                                EntityAttributes.GENERIC_MOVEMENT_SPEED,
-//                                Identifier.of(TacosDelight.MOD_ID, "spicy"),
-//                                0.5f,
-//                                EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
-//    }
 }
