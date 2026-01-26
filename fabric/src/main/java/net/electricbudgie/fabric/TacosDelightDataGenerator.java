@@ -15,7 +15,7 @@ public class TacosDelightDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModBiomeTagProvider::new);
-//        pack.addProvider(ModWorldGenerator::new);
+        pack.addProvider(ModWorldGenerator::new);
         pack.addProvider(ModLootTableGenerator::new);
         var blockTag = pack.addProvider((output, future) -> {
             return new ModBlockTagProvider(output, future);
