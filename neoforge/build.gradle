@@ -59,7 +59,7 @@ dependencies {
     modImplementation "dev.architectury:architectury-neoforge:$rootProject.architectury_api_version"
     modImplementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.8.3"
     //modImplementation "curse.maven:farmers-delight-398521:5772720"
-
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:$rootProject.rei_version"
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 

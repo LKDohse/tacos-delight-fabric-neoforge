@@ -2,6 +2,10 @@ architectury {
     common rootProject.enabled_platforms.split(',')
 }
 
+repositories {
+    maven { url "https://maven.shedaniel.me" }
+}
+
 dependencies {
     // We depend on Fabric Loader here to use the Fabric @Environment annotations,
     // which get remapped to the correct annotations on each platform.
@@ -10,6 +14,8 @@ dependencies {
     mappings "net.fabricmc:yarn:$rootProject.yarn_mappings:v2"
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api:$rootProject.rei_version"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin:$rootProject.rei_version"
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.1'
