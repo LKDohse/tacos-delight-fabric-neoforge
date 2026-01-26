@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:glass_bottle",
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "tacosdelight:shredded_cheese"
+    }
+  ],
+  "result": {
+    "id": "tacosdelight:nacho_cheese",
+    "count": 4
+  },
+  "cookingtime": 400,
+  "experience": 0.3
+}

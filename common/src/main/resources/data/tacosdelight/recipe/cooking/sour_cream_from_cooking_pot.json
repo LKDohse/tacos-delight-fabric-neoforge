@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:glass_bottle",
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "result": {
+    "id": "tacosdelight:sour_cream",
+    "count": 4
+  },
+  "cookingtime": 400,
+  "experience": 0.3
+}

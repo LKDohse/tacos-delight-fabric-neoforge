@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "group": "tacosdelight",
+  "category": "food",
+  "ingredients": [
+    {
+      "tag": "tacosdelight:tomatoes"
+    }
+  ],
+  "tool": {
+    "tag": "farmersdelight:tools/knives"
+  },
+  "result": [
+    {
+      "item": {
+        "id": "tacosdelight:diced_tomatoes",
+        "count": 1
+      }
+    }
+  ]
+}

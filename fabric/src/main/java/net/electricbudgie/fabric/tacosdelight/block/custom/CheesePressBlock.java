@@ -45,11 +45,19 @@ public class CheesePressBlock extends BlockWithEntity {
 
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (stack.getItem() != ModItems.CURDS_AND_WHEY || state.get(PRESSING))
+        if (stack.getItem() != ModItems.CURDS_AND_WHEY.get() || state.get(PRESSING))
             return ItemActionResult.SUCCESS;
         if (world.getBlockEntity(pos)instanceof CheesePressBlockEntityFabric blockEntity) {
             blockEntity.startPressing(pos, state);
             world.playSound(player, pos, SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.BLOCKS, 1f, 1f);
+
+            if (stack.getItem().getRecipeRemainder() != null)
+            {
+                ItemStack remainder = stack.getItem().getRecipeRemainder().getDefaultStack();
+               if(!player.giveItemStack(remainder)){
+                   player.dropItem(remainder, false);
+               }
+            }
             stack.decrement(1);
         }
         return ItemActionResult.SUCCESS;

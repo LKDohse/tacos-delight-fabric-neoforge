@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "group": "tacosdelight",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "tool": {
+    "tag": "farmersdelight:tools/knives"
+  },
+  "result": [
+    {
+      "item": {
+        "id": "tacosdelight:apple_slices",
+        "count": 4
+      }
+    }
+  ]
+}
