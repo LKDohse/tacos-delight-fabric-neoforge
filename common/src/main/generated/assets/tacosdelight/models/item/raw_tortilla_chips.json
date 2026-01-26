@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tacosdelight:item/raw_tortilla_chips"
+  }
+}
