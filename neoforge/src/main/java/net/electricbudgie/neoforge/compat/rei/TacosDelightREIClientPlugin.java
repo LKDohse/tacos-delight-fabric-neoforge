@@ -1,4 +1,4 @@
-package net.electricbudgie.fabric.tacosdelight.compat.rei;
+package net.electricbudgie.neoforge.compat.rei;
 
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;
@@ -6,22 +6,25 @@ import me.shedaniel.rei.api.client.registry.category.CategoryRegistry;
 import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;
 import me.shedaniel.rei.api.client.registry.screen.ScreenRegistry;
 import me.shedaniel.rei.api.common.util.EntryStacks;
-import net.electricbudgie.fabric.tacosdelight.block.FabricModBlocks;
-import net.electricbudgie.fabric.tacosdelight.screen.custom.DeepFryerScreen;
+import me.shedaniel.rei.forge.REIPluginClient;
+import net.electricbudgie.neoforge.block.NeoForgeModBlocks;
+import net.electricbudgie.neoforge.menu.custom.DeepFryerScreen;
 import net.electricbudgie.tacosdelight.block.ModBlocks;
 import net.electricbudgie.tacosdelight.item.ModItems;
 import net.electricbudgie.tacosdelight.recipe.DeepFryerRecipe;
 import net.electricbudgie.tacosdelight.recipe.ModRecipes;
 import net.minecraft.item.ItemStack;
 
+
+@REIPluginClient
 public class TacosDelightREIClientPlugin implements REIClientPlugin {
     @Override
     public void registerCategories(CategoryRegistry registry) {
         registry.add(new DeepFryerCategory());
         registry.add(new CheesePressCategory());
 
-        registry.addWorkstations(DeepFryerCategory.DEEP_FRYER, EntryStacks.of(FabricModBlocks.DEEP_FRYER_BLOCK.get()));
-        registry.addWorkstations(CheesePressCategory.ID, EntryStacks.of(FabricModBlocks.CHEESE_PRESS_BLOCK.get()));
+        registry.addWorkstations(DeepFryerCategory.DEEP_FRYER, EntryStacks.of(NeoForgeModBlocks.DEEP_FRYER_BLOCK.get()));
+        registry.addWorkstations(CheesePressCategory.ID, EntryStacks.of(NeoForgeModBlocks.CHEESE_PRESS_BLOCK.get()));
     }
 
     @Override
