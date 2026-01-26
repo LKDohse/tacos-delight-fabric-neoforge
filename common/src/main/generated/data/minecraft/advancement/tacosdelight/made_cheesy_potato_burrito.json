@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:tacosdelight/made_fiesta_potatoes",
+  "criteria": {
+    "made_cheesy_potato_burrito": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:potato_burrito"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Could you even imagine NOT serving this?",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:potato_burrito"
+    },
+    "title": "Potatoes + Cheese = ❤"
+  },
+  "requirements": [
+    [
+      "made_cheesy_potato_burrito"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:tacosdelight/made_tortilla",
+  "criteria": {
+    "cheese_roll_up": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:cheesy_roll_up"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "At least you heated it up",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:cheesy_roll_up"
+    },
+    "title": "Simple, Yet Effective"
+  },
+  "requirements": [
+    [
+      "cheese_roll_up"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

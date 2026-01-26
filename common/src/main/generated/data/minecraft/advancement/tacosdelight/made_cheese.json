@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:tacosdelight/made_cheese_press",
+  "criteria": {
+    "made_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:cheese_wedge"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "That took way too long",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:cheese_wedge"
+    },
+    "title": "FINALLY"
+  },
+  "requirements": [
+    [
+      "made_cheese"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

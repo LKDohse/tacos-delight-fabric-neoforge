@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:tacosdelight/made_deep_fryer",
+  "criteria": {
+    "made_fiesta_potatoes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:fried_fiesta_potatoes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "So iconic. So versatile.",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:fried_fiesta_potatoes"
+    },
+    "title": "Fried Taters"
+  },
+  "requirements": [
+    [
+      "made_fiesta_potatoes"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
