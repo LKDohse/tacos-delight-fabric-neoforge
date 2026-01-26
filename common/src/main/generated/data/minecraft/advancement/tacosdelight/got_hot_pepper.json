@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:tacosdelight/root",
+  "criteria": {
+    "got_hot_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:hot_pepper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Little Known Fact: Peppers are used for taco seasoning",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:hot_pepper"
+    },
+    "title": "Seems Useful"
+  },
+  "requirements": [
+    [
+      "got_hot_pepper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

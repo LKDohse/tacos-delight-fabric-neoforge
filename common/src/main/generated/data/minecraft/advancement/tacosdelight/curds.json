@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:tacosdelight/got_salty",
+  "criteria": {
+    "curds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tacosdelight:curds_and_whey"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Despite the rhyme, there's probably a way to make this more palatable",
+    "icon": {
+      "count": 1,
+      "id": "tacosdelight:curds_and_whey"
+    },
+    "title": "Little Miss Muffet"
+  },
+  "requirements": [
+    [
+      "curds"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

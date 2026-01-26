@@ -48,6 +48,7 @@ repositories {
     maven { url "https://mvn.devos.one/snapshots/" } // Porting Lib Betas
 }
 
+
 dependencies {
     mappings "net.fabricmc:yarn:$rootProject.yarn_mappings:v2"
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
@@ -77,6 +78,29 @@ processResources {
         expand version: inputs.properties.version
     }
 }
+
+loom {
+    runs {
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${project(":common").file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=tacosdelight"
+
+            runDir "run"
+        }
+    }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir "../common/src/main/generated/"
+        }
+    }
+}
+
 
 shadowJar {
     configurations = [project.configurations.shadowBundle]

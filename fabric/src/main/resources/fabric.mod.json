@@ -20,6 +20,9 @@
     ],
     "client": [
       "net.electricbudgie.fabric.TacosDelightFabricClient"
+    ],
+    "fabric-datagen": [
+      "net.electricbudgie.fabric.TacosDelightDataGenerator"
     ]
   },
   "mixins": [

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:diced_potato"
+    },
+    {
+      "item": "tacosdelight:taco_seasoning"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:uncooked_fiesta_potatoes"
+  }
+}

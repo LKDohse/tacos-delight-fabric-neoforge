@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:flour_tortilla"
+    },
+    {
+      "item": "minecraft:cooked_beef"
+    },
+    {
+      "tag": "tacosdelight:shredded_cheese"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:uncooked_steak_taquito"
+  }
+}

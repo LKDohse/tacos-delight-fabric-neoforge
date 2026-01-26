@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tacosdelight:flour_tortilla"
+    },
+    {
+      "item": "tacosdelight:shredded_cheese"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tacosdelight:tortilla_with_cheese"
+  }
+}
