@@ -1,6 +1,7 @@
 package net.electricbudgie.fabric;
 
 import net.electricbudgie.fabric.tacosdelight.datagen.ModAdvancementProvider;
+import net.electricbudgie.fabric.tacosdelight.datagen.ModBiomeTagProvider;
 import net.electricbudgie.tacosdelight.world.ModConfiguredFeatures;
 import net.electricbudgie.tacosdelight.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -14,7 +15,7 @@ public class TacosDelightDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 //        pack.addProvider(ModModelProvider::new);
-//        pack.addProvider(ModBiomeTagProvider::new);
+        pack.addProvider(ModBiomeTagProvider::new);
 //        pack.addProvider(ModWorldGenerator::new);
 //        pack.addProvider(ModLootTableGenerator::new);
 //        var blockTag = pack.addProvider((output, future) -> {
