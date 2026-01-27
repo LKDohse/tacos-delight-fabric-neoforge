@@ -82,5 +82,13 @@
   "death.attack.blue_raspberry_bush": "%s died stuck is a blue raspberry bush",
   "effect.tacosdelight.disappointed": "Disappointed",
   "effect.tacosdelight.gassy": "Gassy",
-  "effect.tacosdelight.spicy": "Spicy"
+  "effect.tacosdelight.spicy": "Spicy",
+  "tacosdelight.rei.info.blue_raspberry": "It's said that the mysterious blue raspberry (the source of Blue Raspberry Flavor™) can be rarely found in snowy climates, and does not grow at all where it is too warm.",
+  "tacosdelight.rei.info.hot_pepper": "Hot peppers can be found in hot or tropical climates, but will grow just about wherever you plant it.",
+  "tacosdelight.rei.info.lime": "Limes can be found in hot or tropical climates, and do not seem to grow well in cooler environments.",
+  "tacosdelight.rei.info.cheese_wheel": "After getting pressed, cheese typically needs to age before consumption. This variety needs to be placed in a cool, dark, place and aged for about 3 days.",
+  "tacosdelight.rei.info.cheese_wedge": "Once a cheese wheel has finished aging, it can be cut with a knife into wedges for easier distribution.",
+  "tacosdelight.rei.info.flour_tortilla_dough": "Once a dough is made, tortillas can be cooked over a campfire or (more quickly) in a skillet.",
+  "tacosdelight.rei.info.salt": "Salt is the common form of a mineral mined from deep underground, and then used as a very common cooking ingredient.",
+  "tacosdelight.rei.info.halite": "Halite is the mineral form of sodium chloride, also known as table salt. It can be found most commonly closer to the surface near the ocean or flat landmasses like plains or deserts, or deep underground nearly anywhere."
 }
