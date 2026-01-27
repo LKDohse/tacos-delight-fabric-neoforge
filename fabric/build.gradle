@@ -70,6 +70,7 @@ dependencies {
         // If you want to exclude Porting Lib to instead provide your own version of Porting Lib, uncomment the above line..
     }
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:$rootProject.rei_version"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:$rootProject.rei_version"
         modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:$rootProject.rei_version"
 
 }
