@@ -29,7 +29,7 @@ public class ModCreativeTabs {
 
         public static void initTabs(){
             TACOS_DELIGHT_TAB = TABS.register(tacosDelightTab, ()->
-                    CreativeTabRegistry.create(Text.translatable("category.tacos_delight_tab"), () -> new ItemStack(ModItems.BEEF_TACO)));
+                    CreativeTabRegistry.create(Text.translatable("itemgroup.tacosdelight"), () -> new ItemStack(ModItems.BEEF_TACO)));
 
             TABS.register();
         }
